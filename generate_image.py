@@ -8,8 +8,10 @@ from PIL import Image
 openai.organization = "org-ib1ZWJAduDkTLlWWceXwAUes"
 openai.api_key = os.getenv("OPENAI_API_KEY")
 # Use OpenAI API to create an image based on the given prompt
+your_description = input("Enter your description for the image you want: ")
+# print(your_description)
 response = openai.Image.create(
-    prompt="a fat and talent Chinese male computer science   student named Jerry ",
+    prompt=your_description,
     n=1,
     size="1024x1024"
 )
@@ -20,4 +22,6 @@ response = requests.get(image_url)
 # Use the Image package from PIL to open the image content
 img = Image.open(io.BytesIO(response.content))
 # Save the image to a file named "yune.jpg" in the "img" folder
-img.save("img/leren.jpg")
+img_name = "img/"+your_description.replace(" ", "_")+".jpg"
+
+img.save(img_name)
