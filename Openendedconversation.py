@@ -6,16 +6,14 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def chat_with_gpt3(prompt):
     completions = openai.Completion.create(
-        engine="davinci-instruct-beta",
+        engine="text-davinci-003",
         prompt=prompt,
 
         n=1,
         stop=None,
         temperature=0.5,
-        max_tokens=60,
+        max_tokens=1000,
         top_p=1,
-        frequency_penalty=0.5,
-        presence_penalty=0.6,
     )
 
     message = completions.choices[0].text
