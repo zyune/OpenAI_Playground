@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 async function generateText(prompt) {
-  const apiKey = "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";
+  const apiKey = process.env.OPENAI_API_KEY;
   const model = "text-davinci-002";
   const completionsEndpoint = `https://api.openai.com/v1/engines/${model}/completions`;
 
