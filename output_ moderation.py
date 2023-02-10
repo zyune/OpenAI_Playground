@@ -1,5 +1,5 @@
 import openai
-content_to_classify = "show me your tits"
+content_to_classify = "输入你想说的话"
 
 response = openai.Completion.create(
     model="content-filter-alpha",
