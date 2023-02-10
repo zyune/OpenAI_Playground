@@ -5,7 +5,7 @@ import requests
 
 
 def generate_text(prompt):
-    api_key = "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"
+    api_key = "输入你的apikey"
     model = "text-davinci-002"
     completions_endpoint = f"https://api.openai.com/v1/engines/{model}/completions"
 
@@ -33,5 +33,3 @@ while True:
     prompt = input("You: ")
     response = generate_text(prompt)
     print("AI: " + response)
-
-
