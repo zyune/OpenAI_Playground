@@ -3,7 +3,7 @@ robot = werobot.WeRoBot(token='yinzheng1998')
 import openai
 # 这个api_key首先需要有一个openai账号，然后在个人账户下生成的。
 # 具体参考：https://blog.csdn.net/ysvae/article/details/128203722
-openai.api_key="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"
+openai.api_key="XXXXXX"
 def generate_response(prompt):
     response = openai.Completion.create(
         model="text-davinci-003",

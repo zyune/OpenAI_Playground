@@ -4,7 +4,7 @@ import openai
 robot = werobot.WeRoBot(token='yinzheng1998')
 
 # Set up OpenAI API key
-openai.api_key = "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"
+openai.api_key = "sk-XXXX"
 
 # Set up conversation history dictionary
 history = {}
